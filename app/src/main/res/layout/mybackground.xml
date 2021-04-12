@@ -19,16 +19,20 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+
             android:id="@+id/passemail"
             android:layout_width="match_parent"
             android:layout_height="40dp"
+            android:fontFamily="@font/almendra_bold_italic"
             android:gravity="center_vertical"
-            android:textSize="22sp"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints,RtlCompat" />
 
 
         tools:layout_editor_absoluteX="0dp"

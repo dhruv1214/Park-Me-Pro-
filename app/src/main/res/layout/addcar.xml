@@ -8,6 +8,9 @@
     tools:context=".addcar"
     android:background="#00bfff">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,6 +19,7 @@
         android:layout_marginBottom="100dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout2"
@@ -56,17 +60,18 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_margin="16dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/buttonbg"
             android:drawableLeft="@drawable/ic_baseline_location_on_24"
             android:drawablePadding="10dp"
             android:hint="Address"
             app:layout_constraintTop_toBottomOf="@+id/textView"
-            tools:layout_editor_absoluteX="16dp" />
+            tools:layout_editor_absoluteX="17dp" />
 
         <EditText
             android:id="@+id/time1"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
+            android:layout_width="181dp"
+            android:layout_height="45dp"
             android:layout_margin="16dp"
             android:layout_marginTop="28dp"
             android:background="@drawable/buttonbg"
@@ -85,7 +90,6 @@
             android:text="setTIme"
             android:id="@+id/time1btn"
             android:textColor="#fff"
-            app:layout_constraintBottom_toTopOf="@+id/vehicle_no_edittext"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/email_edittext"
             app:layout_constraintTop_toBottomOf="@+id/name_edittext" />
@@ -93,8 +97,8 @@
 
         <EditText
             android:id="@+id/time2"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
+            android:layout_width="183dp"
+            android:layout_height="47dp"
             android:layout_margin="16dp"
             android:background="@drawable/buttonbg"
             android:drawableLeft="@drawable/ic_baseline_more_time_24"
@@ -116,6 +120,7 @@
 
 
         <EditText
+            android:inputType="number"
             android:id="@+id/numberofhours"
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -128,6 +133,7 @@
             tools:layout_editor_absoluteX="32dp" />
 
         <EditText
+            android:inputType="textEmailAddress"
             android:id="@+id/emailofuser"
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -139,8 +145,42 @@
             app:layout_constraintTop_toBottomOf="@+id/time2"
             tools:layout_editor_absoluteX="22dp" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <EditText
+            android:inputType="phone"
+            android:id="@+id/phonenumber"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/buttonbg"
+            android:drawableLeft="@drawable/email"
+            android:drawablePadding="10dp"
+            android:hint="phonenumber"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/numberofhours" />
+
+        <EditText
+            android:id="@+id/vehiclenumber"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/buttonbg"
+            android:drawableLeft="@drawable/car"
+            android:drawablePadding="10dp"
+            android:hint="vehiclenumber"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phonenumber" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
     <Button
         android:id="@+id/button_add"
         android:layout_width="100dp"

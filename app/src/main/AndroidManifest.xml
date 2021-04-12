@@ -2,27 +2,37 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.projectwarrior">
-<uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".entering">
-
-        </activity>
-        <activity android:name=".Plain"/>
+        <activity android:name=".update_info"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".check_car_status"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".entering"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Plain"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".mybackground"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".addcar" />
+            android:name=".addcar"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".removecar" />
-<activity
-    android:name=".Signup"/>
+            android:name=".removecar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Signup"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".loginactivity"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -35,6 +45,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="portrait"
+            tools:replace="screenOrientation" />
     </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
 
 </manifest>

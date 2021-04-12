@@ -15,12 +15,10 @@ import com.example.projectwarrior.R.*
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        window.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(layout.activity_main)
-
-        //removing the titlebar from top
-        //-->
-     //   window.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
-      //  setContentView(layout.activity_main)
+ 
+        
 
 
         //adding animation xml files in the kotlin

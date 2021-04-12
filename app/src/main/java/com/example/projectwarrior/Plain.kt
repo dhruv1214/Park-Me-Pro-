@@ -74,7 +74,7 @@ class Plain : AppCompatActivity() {
 
 
         map["address"]="Sharma parkings near 7-seas mall fatehganj vadodara"
-        map["emailid"] = "desaidhruv@gmail.com"
+        map["emailid"] = "dhruv2146desai@gmail.com"
         map["owner name"]="Shivam Sharma"
         map["available spot"]="30"
         map["phone number"]="9933776655"

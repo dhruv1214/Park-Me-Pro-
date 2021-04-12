@@ -12,9 +12,9 @@
         android:layout_height="match_parent"
         android:background="@drawable/loginactivitybg"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="100dp"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout2"
@@ -39,6 +39,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
+            android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:fontFamily="@font/almendra_bold_italic"
@@ -54,48 +55,98 @@
 
 
 
+
         <EditText
+            android:inputType="textEmailAddress"
             android:id="@+id/email_edittext"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:layout_margin="16dp"
             android:background="@drawable/buttonbg"
             android:drawableLeft="@drawable/email"
             android:drawablePadding="10dp"
             android:hint="EMAIL..."
-            app:layout_constraintBottom_toTopOf="@+id/vehicle_no_edittext"
-            tools:layout_editor_absoluteX="16dp"
-            android:layout_margin="16dp"
-            android:importantForAutofill="no" />
+            android:importantForAutofill="no"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            tools:layout_editor_absoluteX="32dp" />
 
-        <EditText
-            android:id="@+id/vehicle_no_edittext"
+        <TextView
+            android:id="@+id/textView5"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@drawable/buttonbg"
-            android:drawableLeft="@drawable/car"
-            android:drawablePadding="10dp"
-            android:layout_margin="16dp"
-            android:hint="vehicle no..."
-            app:layout_constraintBottom_toTopOf="@+id/paid_edittext"
-            tools:layout_editor_absoluteX="16dp" />
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="Phonenumber:"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email_edittext" />
 
-        <EditText
-            android:id="@+id/paid_edittext"
+        <TextView
+            android:id="@+id/nametextview"
             android:layout_width="match_parent"
-            android:layout_margin="16dp"
-            android:layout_height="50dp"
-            android:background="@drawable/buttonbg"
-            android:drawableLeft="@drawable/money"
-            android:drawablePadding="10dp"
-            android:hint="paid amount..."
-            app:layout_constraintBottom_toBottomOf="parent"
-            tools:layout_editor_absoluteX="36dp" />
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:text=""
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
+        <TextView
+            android:id="@+id/vehicleno_textview"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:text=""
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="Vehicle:"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nametextview" />
+
+        <Button
+            android:id="@+id/button_check"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="97dp"
+            android:background="@drawable/buttonbgblack"
+            android:text="check"
+            android:textColor="#fff"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vehicleno_textview"
+            tools:ignore="MissingConstraints" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
-        android:id="@+id/button_add"
+        android:id="@+id/button_removal"
         android:layout_width="200dp"
         android:layout_height="60dp"
         android:background="@drawable/buttonbgblack"
@@ -106,8 +157,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

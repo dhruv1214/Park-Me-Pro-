@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.util.Patterns
 import android.view.View
+import android.view.WindowManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -25,6 +26,7 @@ class entering : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        window.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(R.layout.entering)
 
         val email = findViewById<EditText>(R.id.email_edittext)
@@ -34,7 +36,7 @@ class entering : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
         button1.setOnClickListener {
-        startActivity(Intent(this,mybackground::class.java))
+        startActivity(Intent(this,Signup::class.java))
 
         }
         button.setOnClickListener{
@@ -74,7 +76,7 @@ class entering : AppCompatActivity() {
 
                     } else {
 
-                        Toast.makeText(baseContext, " ",
+                        Toast.makeText(baseContext, "Enter Data Correctly ",
                                 Toast.LENGTH_SHORT).show()
                             updateUI(null)
 
@@ -91,7 +93,7 @@ class entering : AppCompatActivity() {
     private fun updateUI(user: FirebaseUser?) {
         if(user != null) {
             if(user.isEmailVerified){
-            startActivity(Intent(this,Plain::class.java))
+            startActivity(Intent(this,mybackground::class.java))
             finish()
         }
         else {
@@ -99,10 +101,6 @@ class entering : AppCompatActivity() {
                         baseContext, "Please verified your email id ",
                         Toast.LENGTH_SHORT).show()
             }
-        } else {
-            Toast.makeText(
-                    baseContext, " ",Toast.LENGTH_SHORT).show()
-
         }
 
     }
